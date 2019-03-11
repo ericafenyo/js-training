@@ -11,7 +11,16 @@
  */
 
 // Your code :
-
+const isPositive = (num) => num > 0
+const sign = (a) => {
+    if (a === 0) {
+        return 0
+    } else if (isPositive(a)) {
+        return 1
+    } else {
+        return -1
+    }
+}
 //* Begin of tests
 const assert = require('assert')
 

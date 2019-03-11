@@ -10,6 +10,33 @@
  */
 
 // Your code :
+const isPositive = (num) => num > 0
+const multiply = (a, b) => {
+
+    let shouldNegateProduct = false
+    if (!isPositive(a) || !isPositive(b)) {
+        shouldNegateProduct = true
+    }
+
+    if (!isPositive(a) && !isPositive(b)) {
+        shouldNegateProduct = false
+    }
+
+    if (a === 0 || b === 0) {
+        return 0
+    }
+
+    let val = 0
+    const loop = count => {
+        if (count < Math.abs(a)) {
+            val += Math.abs(b)
+            loop(count + 1)
+        }
+    }
+
+    loop(0)
+    return shouldNegateProduct ? -val : val
+}
 
 //* Begin of tests
 const assert = require('assert')

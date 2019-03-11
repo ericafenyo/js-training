@@ -11,9 +11,24 @@
  */
 
 
+// Your code :
+const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+const jadenCase = (words) => {
+    let concString = ""
+    words.split(" ").forEach((value) => {
+        concString += capitalize(value) + " "
+    })
+    return concString.trim()
+}
+
+
+
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+assert.strictEqual(typeof jadenCase, 'function')
+assert.strictEqual(jadenCase.length, 1)
+assert.strictEqual(jadenCase("How are you ?"), "How Are You ?")
+
 // End of tests */

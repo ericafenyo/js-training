@@ -8,6 +8,16 @@
  *
  */
 
+// Your code :
+const repeat = (str, num) => {
+    let concStr = ""
+    for (let i = 0; i < num; i++) {
+        concStr += str
+    }
+    return concStr
+}
+
+
 //* Begin of tests
 const assert = require('assert')
 

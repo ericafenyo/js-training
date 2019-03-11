@@ -8,6 +8,19 @@
  */
 
 // Your code :
+const isPositive = (num) => num > 0
+const sign = (a) => {
+    if (a === 0) {
+        return 0
+    } else if (isPositive(a)) {
+        return 1
+    } else {
+        return -1
+    }
+}
+
+const sameSign = (a, b) => sign(a) === sign(b)
+
 
 //* Begin of tests
 const assert = require('assert')

@@ -12,9 +12,23 @@
  *
  */
 
+// Your code :
+const cutFirstTwo = (str) => str.substring(2, str.length)
+const keepFirst = (str) => str.substring(0, 2)
+const keepLast = (str) => str.substring(str.length - 2, str.length)
+const keepFirstLast = (str) => keepFirst(cutFirstTwo(str))
+
 
 //* Begin of tests
 const assert = require('assert')
 
-assert.fail('You must write your own tests')
+assert.strictEqual(typeof keepFirst, 'function')
+assert.strictEqual(typeof keepLast, 'function')
+assert.strictEqual(typeof keepFirstLast, 'function')
+assert.strictEqual(keepFirst.length, 1)
+assert.strictEqual(keepLast.length, 1)
+assert.strictEqual(keepFirstLast.length, 1)
+assert.deepStrictEqual(keepFirst("JavaScript"), "Ja")
+assert.deepStrictEqual(keepLast("JavaScript"), "pt")
+assert.deepStrictEqual(keepFirstLast("JavaScript"), "va")
 // End of tests */

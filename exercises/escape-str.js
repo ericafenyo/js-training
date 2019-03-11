@@ -8,6 +8,7 @@
  */
 
 // Your code :
+const escapeStr = 'Bar\'s address is \"https://bar.example.com" with two \"\\\\" after \`https`'
 
 //* Begin of tests
 const assert = require('assert')
